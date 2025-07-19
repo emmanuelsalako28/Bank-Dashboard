@@ -2,62 +2,158 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
   <title>Walmart Prepaid Card - Settings</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;700&display=swap" rel="stylesheet">
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/bootstrap-icons.css" rel="stylesheet">
-  <link href="css/tooplate-mini-finance.css" rel="stylesheet">
+
+  <!-- CSS FILES -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/bootstrap-icons.css" rel="stylesheet" />
+  <link href="css/tooplate-mini-finance.css" rel="stylesheet" />
 </head>
 
 <body>
-  <!-- NAVBAR -->
   <header class="navbar sticky-top flex-md-nowrap">
-    <div class="container-fluid">
-      <div class="row align-items-center w-100">
-        <div class="col-6 col-md-3">
-          <a class="navbar-brand" href="index.html">
-            <i class="bi-box"></i>
-            Walmart Prepaid Card
+    <div class="col-md-3 col-lg-3 me-0 px-3 fs-6">
+      <a class="navbar-brand" href="index.html">
+        <i class="bi-box"></i> Walmart Prepaid Card
+      </a>
+    </div>
+
+    <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <form class="custom-form header-form ms-lg-3 ms-md-3 me-lg-auto me-md-auto order-2 order-lg-0 order-md-0" role="search">
+      <input class="form-control" type="text" placeholder="Search" />
+    </form>
+
+    <div class="navbar-nav me-lg-2">
+      <div class="nav-item text-nowrap d-flex align-items-center">
+        <!-- Notifications -->
+        <div class="dropdown ps-3">
+          <a class="nav-link dropdown-toggle text-center" href="#" data-bs-toggle="dropdown">
+            <i class="bi-bell"></i>
+            <span class="position-absolute start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+              <span class="visually-hidden">New alerts</span>
+            </span>
           </a>
+          <ul class="dropdown-menu notifications-block-wrap bg-white shadow">
+            <small>Notifications</small>
+            <li class="notifications-block border-bottom pb-2 mb-2">
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <div class="notifications-icon-wrap bg-success">
+                  <i class="notifications-icon bi-check-circle-fill"></i>
+                </div>
+                <div>
+                  <span>Your account has been created successfuly.</span>
+                  <p>12 days ago</p>
+                </div>
+              </a>
+            </li>
+            <li class="notifications-block border-bottom pb-2 mb-2">
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <div class="notifications-icon-wrap bg-info">
+                  <i class="notifications-icon bi-folder"></i>
+                </div>
+                <div>
+                  <span>Please check. We have sent a Daily report.</span>
+                  <p>10 days ago</p>
+                </div>
+              </a>
+            </li>
+            <li class="notifications-block">
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <div class="notifications-icon-wrap bg-danger">
+                  <i class="notifications-icon bi-question-circle"></i>
+                </div>
+                <div>
+                  <span>Account verification failed.</span>
+                  <p>1 hour ago</p>
+                </div>
+              </a>
+            </li>
+          </ul>
         </div>
-        <div class="col-6 d-md-none text-end">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-        <div class="col-12 col-md-5 my-2 my-md-0">
-          <form class="custom-form header-form" action="#" method="get">
-            <input class="form-control" name="search" type="text" placeholder="Search" aria-label="Search">
-          </form>
-        </div>
-        <div class="col-12 col-md-4">
-          <div class="d-flex justify-content-end align-items-center">
-            <!-- Notifications, Social, and Profile dropdowns remain unchanged -->
-            <!-- ... (unchanged content) ... -->
+
+        <!-- Social Dropdown -->
+        <div class="dropdown ps-1">
+          <a class="nav-link dropdown-toggle text-center" href="#" data-bs-toggle="dropdown">
+            <i class="bi-three-dots-vertical"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-social bg-white shadow">
+            <div class="container">
+              <div class="row">
+                <!-- Repeat social items -->
+                <!-- Google -->
+                <div class="col-4">
+                  <a class="dropdown-item text-center" href="#">
+                    <img src="images/social/search.png" class="profile-image img-fluid" alt="" />
+                    <span class="d-block">Google</span>
+                  </a>
+                </div>
+                <!-- Add other icons similarly... -->
+              </div>
+            </div>
           </div>
+        </div>
+
+        <!-- Profile Dropdown -->
+        <div class="dropdown px-3">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+            <img src="images/medium-shot-happy-man-smiling.jpg" class="profile-image img-fluid" alt="" />
+          </a>
+          <ul class="dropdown-menu bg-white shadow">
+            <li>
+              <div class="dropdown-menu-profile-thumb d-flex">
+                <img src="images/medium-shot-happy-man-smiling.jpg" class="profile-image img-fluid me-3" alt="" />
+                <div class="d-flex flex-column">
+                  <small>Mathew</small>
+                  <a href="#">mathew@site.com</a>
+                </div>
+              </div>
+            </li>
+            <li><a class="dropdown-item" href="profile.html"><i class="bi-person me-2"></i> Profile</a></li>
+            <li><a class="dropdown-item" href="setting.html"><i class="bi-gear me-2"></i> Settings</a></li>
+            <li><a class="dropdown-item" href="help-center.html"><i class="bi-question-circle me-2"></i> Help</a></li>
+            <li class="border-top mt-3 pt-2 mx-4">
+              <a class="dropdown-item" href="/index.html"><i class="bi-box-arrow-left me-2"></i> Logout</a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- PAGE CONTENT -->
   <div class="container-fluid">
     <div class="row">
-      <!-- SIDEBAR -->
+      <!-- Sidebar -->
       <nav id="sidebarMenu" class="col-md-3 col-lg-3 d-md-block sidebar collapse">
         <div class="position-sticky py-4 px-3 sidebar-sticky">
-          <!-- Sidebar content unchanged -->
+          <ul class="nav flex-column h-100">
+            <li class="nav-item"><a class="nav-link" href="/dashboard.html"><i class="bi-house-fill me-2"></i> Overview</a></li>
+            <li class="nav-item"><a class="nav-link" href="wallet.html"><i class="bi-wallet me-2"></i> My Wallet</a></li>
+            <li class="nav-item"><a class="nav-link" href="profile.html"><i class="bi-person me-2"></i> Profile</a></li>
+            <li class="nav-item"><a class="nav-link active" href="setting.html"><i class="bi-gear me-2"></i> Settings</a></li>
+            <li class="nav-item"><a class="nav-link" href="help-center.html"><i class="bi-question-circle me-2"></i> Help Center</a></li>
+            <li class="nav-item featured-box mt-lg-5 mt-4 mb-4">
+              <img src="images/credit-card.png" class="img-fluid" alt="" />
+              <a class="btn custom-btn" href="#">Upgrade</a>
+            </li>
+            <li class="nav-item border-top mt-auto pt-2">
+              <a class="nav-link" href="/index.html"><i class="bi-box-arrow-left me-2"></i> Logout</a>
+            </li>
+          </ul>
         </div>
       </nav>
 
-      <!-- MAIN SECTION -->
-      <main class="main-wrapper col-md-9 ms-sm-auto py-4 col-lg-9 px-md-4 border-start">
+      <!-- Main Content -->
+      <main class="main-wrapper col-md-9 ms-sm-auto col-lg-9 px-md-4 py-4 border-start">
         <div class="title-group mb-3">
           <h1 class="h2 mb-0">Send Money</h1>
         </div>
@@ -65,25 +161,48 @@
         <div class="row my-4">
           <div class="col-lg-7 col-12">
             <div class="custom-block bg-white">
-              <!-- Tabs & Form unchanged -->
+              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                  <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button">Send Money</button>
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="profile-tab-pane" role="tabpanel">
+                  <h6 class="mb-4">User Profile</h6>
+                  <form class="custom-form profile-form">
+                    <input class="form-control" type="text" placeholder="Receiver Name" />
+                    <input class="form-control" type="text" placeholder="Bank Name" />
+                    <input class="form-control" type="text" placeholder="Account Number" />
+                    <input class="form-control" type="text" placeholder="Amount : " />
+                    <div class="d-flex">
+                      <button type="submit" class="form-control ms-2"><a href="dashboard.html">Send</a></button>
+                    </div>
+                  </form>
+                </div>
+              </div>
             </div>
           </div>
 
           <div class="col-lg-5 col-12">
             <div class="custom-block custom-block-balance">
-              <!-- Balance Block unchanged -->
+              <small>Your Balance</small>
+              <h2 class="mt-2 mb-3">$394,800.74</h2>
+              <div class="custom-block-numbers d-flex align-items-center">
+                <span>****</span><span>****</span><span>****</span><p>2560</p>
+              </div>
+              <div class="d-flex">
+                <div><small>Valid Date</small><p>12/2028</p></div>
+                <div class="ms-auto"><small>Card Holder</small><p>Mathew</p></div>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- FOOTER -->
         <footer class="site-footer">
           <div class="container">
             <div class="row">
               <div class="col-12">
-                <p class="copyright-text">
-                  Copyright © Walmart Prepaid Card 2024 - Design
-                </p>
+                <p class="copyright-text">Copyright © Walmart Prepaid Card 2024 - Design</p>
               </div>
             </div>
           </div>
@@ -92,7 +211,7 @@
     </div>
   </div>
 
-  <!-- SCRIPTS -->
+  <!-- JAVASCRIPT FILES -->
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/custom.js"></script>
